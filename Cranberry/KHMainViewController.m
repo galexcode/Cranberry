@@ -14,10 +14,37 @@
 
 @implementation KHMainViewController
 
+@synthesize playerOneTimerLabel;
+
+int hours, minutes, seconds;
+int secondsLeft;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    secondsLeft = 16925;
+    [self countdownTimer];
+}
+
+- (void)updateCounter:(NSTimer *)theTimer {
+    if (secondsLeft > 0) {
+        secondsLeft --;
+        hours = secondsLeft / 3600;
+        minutes = (secondsLeft % 3600) / 60;
+        seconds = (secondsLeft % 3600) % 60;
+        playerOneTimerLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
+    }
+    else {
+        secondsLeft = 16925;
+    }
+}
+
+- (void)countdownTimer {
+    secondsLeft = hours = minutes = seconds = 0;
+    playerOneTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,6 +52,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Flipside View
 

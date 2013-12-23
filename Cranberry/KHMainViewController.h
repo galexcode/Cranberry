@@ -8,6 +8,15 @@
 
 #import "KHFlipsideViewController.h"
 
-@interface KHMainViewController : UIViewController <KHFlipsideViewControllerDelegate>
+@interface KHMainViewController : UIViewController <KHFlipsideViewControllerDelegate> {
+    NSTimer *playerOneTimer;
+    IBOutlet UILabel *playerOneTimerLabel;
+}
+
+@property (nonatomic, retain) UILabel *playerOneTimerLabel;
+
+-(void)updateCounter:(NSTimer *)theTimer;
+-(void)countdownTimer;
+
 
 @end
