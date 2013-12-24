@@ -14,9 +14,10 @@
 }
 
 @property (nonatomic, retain) UILabel *playerOneTimerLabel;
+@property (nonatomic, retain) IBOutlet UILabel *startTimer;
 
 -(void)updateCounter:(NSTimer *)theTimer;
--(void)countdownTimer;
+-(IBAction)countdownTimer:(UIButton *)sender;
 
 
 @end

@@ -15,6 +15,7 @@
 @implementation KHMainViewController
 
 @synthesize playerOneTimerLabel;
+@synthesize startTimer;
 
 int hours, minutes, seconds;
 int secondsLeft;
@@ -24,8 +25,6 @@ int secondsLeft;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    secondsLeft = 16925;
-    [self countdownTimer];
 }
 
 - (void)updateCounter:(NSTimer *)theTimer {
@@ -41,7 +40,7 @@ int secondsLeft;
     }
 }
 
-- (void)countdownTimer {
+- (IBAction)countdownTimer:(UIButton *)sender {
     secondsLeft = hours = minutes = seconds = 0;
     playerOneTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
 
