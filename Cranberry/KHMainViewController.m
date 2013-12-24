@@ -46,7 +46,7 @@ int secondsLeft;
     }
     
     secondsLeft = hours = minutes = seconds = 0;
-    playerOneTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+    playerOneTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
 
 }
 
