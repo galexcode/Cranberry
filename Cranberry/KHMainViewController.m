@@ -24,7 +24,7 @@ int secondsLeft;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    playerOneTimer = nil;
 }
 
 - (void)updateCounter:(NSTimer *)theTimer {
@@ -41,6 +41,10 @@ int secondsLeft;
 }
 
 - (IBAction)countdownTimer:(UIButton *)sender {
+    if (playerOneTimer != nil) {
+        [playerOneTimer invalidate];
+    }
+    
     secondsLeft = hours = minutes = seconds = 0;
     playerOneTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
 
