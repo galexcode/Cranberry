@@ -30,7 +30,7 @@
                                     <segue destination="kIf-nA-PKG" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="ZEO-Qe-X3j"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-uw-YR7">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-uw-YR7">
                                 <rect key="frame" x="20" y="415" width="280" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -52,6 +52,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="1ym-A3-aKq"/>
                             <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Uf2-YL-3zF"/>
+                            <constraint firstItem="Ix6-uw-YR7" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" constant="20" id="fu5-gQ-gVe"/>
                         </constraints>
                     </view>
                     <connections>
