@@ -14,7 +14,7 @@
 - (void)flipsideViewControllerDidFinish:(KHFlipsideViewController *)controller;
 @end
 
-@interface KHFlipsideViewController : UIViewController
+@interface KHFlipsideViewController : UITableViewController
 
 @property (weak, nonatomic) id <KHFlipsideViewControllerDelegate> delegate;
 

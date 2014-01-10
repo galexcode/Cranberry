@@ -15,13 +15,13 @@
 		6E26E913186822F600625590 /* KHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E26E912186822F600625590 /* KHAppDelegate.m */; };
 		6E26E916186822F600625590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E26E914186822F600625590 /* Main.storyboard */; };
 		6E26E919186822F600625590 /* KHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E26E918186822F600625590 /* KHMainViewController.m */; };
-		6E26E91C186822F600625590 /* KHFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E26E91B186822F600625590 /* KHFlipsideViewController.m */; };
 		6E26E91E186822F600625590 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E26E91D186822F600625590 /* Images.xcassets */; };
 		6E26E925186822F600625590 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E26E924186822F600625590 /* XCTest.framework */; };
 		6E26E926186822F600625590 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E26E902186822F500625590 /* Foundation.framework */; };
 		6E26E927186822F600625590 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E26E906186822F500625590 /* UIKit.framework */; };
 		6E26E92F186822F600625590 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E26E92D186822F600625590 /* InfoPlist.strings */; };
 		6E26E931186822F600625590 /* CranberryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E26E930186822F600625590 /* CranberryTests.m */; };
+		6EC69315187F747100D4F0E6 /* KHOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC69314187F747100D4F0E6 /* KHOptionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,14 +48,14 @@
 		6E26E915186822F600625590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E26E917186822F600625590 /* KHMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHMainViewController.h; sourceTree = "<group>"; };
 		6E26E918186822F600625590 /* KHMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHMainViewController.m; sourceTree = "<group>"; };
-		6E26E91A186822F600625590 /* KHFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHFlipsideViewController.h; sourceTree = "<group>"; };
-		6E26E91B186822F600625590 /* KHFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHFlipsideViewController.m; sourceTree = "<group>"; };
 		6E26E91D186822F600625590 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E26E923186822F600625590 /* CranberryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CranberryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E26E924186822F600625590 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6E26E92C186822F600625590 /* CranberryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CranberryTests-Info.plist"; sourceTree = "<group>"; };
 		6E26E92E186822F600625590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E26E930186822F600625590 /* CranberryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CranberryTests.m; sourceTree = "<group>"; };
+		6EC69313187F747100D4F0E6 /* KHOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHOptionViewController.h; sourceTree = "<group>"; };
+		6EC69314187F747100D4F0E6 /* KHOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHOptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +120,8 @@
 				6E26E914186822F600625590 /* Main.storyboard */,
 				6E26E917186822F600625590 /* KHMainViewController.h */,
 				6E26E918186822F600625590 /* KHMainViewController.m */,
-				6E26E91A186822F600625590 /* KHFlipsideViewController.h */,
-				6E26E91B186822F600625590 /* KHFlipsideViewController.m */,
+				6EC69313187F747100D4F0E6 /* KHOptionViewController.h */,
+				6EC69314187F747100D4F0E6 /* KHOptionViewController.m */,
 				6E26E91D186822F600625590 /* Images.xcassets */,
 				6E26E909186822F600625590 /* Supporting Files */,
 			);
@@ -258,7 +258,7 @@
 				6E26E90F186822F600625590 /* main.m in Sources */,
 				6E26E913186822F600625590 /* KHAppDelegate.m in Sources */,
 				6E26E919186822F600625590 /* KHMainViewController.m in Sources */,
-				6E26E91C186822F600625590 /* KHFlipsideViewController.m in Sources */,
+				6EC69315187F747100D4F0E6 /* KHOptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +467,7 @@
 				6E26E936186822F600625590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E26E937186822F600625590 /* Build configuration list for PBXNativeTarget "CranberryTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +476,7 @@
 				6E26E939186822F600625590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
