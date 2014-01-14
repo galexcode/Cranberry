@@ -12,6 +12,7 @@
 @property (strong, nonatomic) UIDatePicker *datePicker;
 @property (strong, nonatomic) UIToolbar *datePickerToolbar;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *timeLength;
 
 @end
 

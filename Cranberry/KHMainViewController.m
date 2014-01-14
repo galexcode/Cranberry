@@ -66,7 +66,7 @@ int secondsLeft;
 
 #pragma mark - Flipside View
 
-- (void)flipsideViewControllerDidFinish:(KHFlipsideViewController *)controller
+- (void)flipsideViewControllerDidFinish:(KHOptionViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

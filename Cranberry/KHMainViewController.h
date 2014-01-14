@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Kevin Hwang. All rights reserved.
 //
 
-#import "KHFlipsideViewController.h"
+#import "KHOptionViewController.h"
 
-@interface KHMainViewController : UIViewController <KHFlipsideViewControllerDelegate> {
+@interface KHMainViewController : UIViewController <KHOptionViewControllerDelegate> {
     NSTimer *playerOneTimer;
     IBOutlet UILabel *playerOneTimerLabel;
 }

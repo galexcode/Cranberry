@@ -108,6 +108,7 @@
                     </tableView>
                     <connections>
                         <outlet property="textField" destination="sEx-fN-mgY" id="Eac-r1-1X9"/>
+                        <outlet property="timeLength" destination="sEx-fN-mgY" id="59k-8J-lM9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpI-nK-8MN" userLabel="First Responder" sceneMemberID="firstResponder"/>

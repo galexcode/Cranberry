@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class KHOptionViewController;
+
+@protocol KHOptionViewControllerDelegate
+- (void)flipsideViewControllerDidFinish:(KHOptionViewController *)controller;
+@end
+
 @interface KHOptionViewController : UITableViewController
+
+@property (weak, nonatomic) id <KHOptionViewControllerDelegate> delegate;
+
+- (IBAction)done:(id)sender;
+
 
 @end
