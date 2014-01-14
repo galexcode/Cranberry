@@ -9,10 +9,16 @@
 #import "KHOptionViewController.h"
 
 @interface KHOptionViewController ()
+@property (strong, nonatomic) UIDatePicker *datePicker;
+@property (strong, nonatomic) UIToolbar *datePickerToolbar;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
+
 @implementation KHOptionViewController
+
+@synthesize datePicker, datePickerToolbar, textField;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,12 +32,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Initialize UIDatePicker
+    datePicker = [[UIDatePicker alloc] init];
+    datePicker.datePickerMode = UIDatePickerModeTime;
+    [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged]; //respond to changes in picker value
+    
+    // Setup UIToolbar for UIDatePicker
+    datePickerToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0, self.view.bounds.size.width, 44)];
+    [datePickerToolbar setBarStyle:UIBarStyleBlackTranslucent];
+    UIBarButtonItem *extraSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissPicker:)];
+    [datePickerToolbar setItems:[[NSArray alloc] initWithObjects: extraSpace, doneButton, nil]];
+    
+    // Set UITextfield's inputView as UIDatePicker
+    textField.inputView = datePicker;
+    
+    // Set UITextfield's inputAccessoryView as UIToolbar
+    textField.inputAccessoryView = datePickerToolbar;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)dismissPicker:(id)sender {
+    [textField resignFirstResponder];
+}
+
+- (void)datePickerValueChanged:(id) sender {
+    NSDate *selectedDate = datePicker.date;
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"HH:mm:ss"];
+    [textField setText: [df stringFromDate:selectedDate]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,31 +77,31 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return 2;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Settings";
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"OptionCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"Foobar";
-    
-    return cell;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    // Return the number of sections.
+//    return 1;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    // Return the number of rows in the section.
+//    return 2;
+//}
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return @"Settings";
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *CellIdentifier = @"OptionCell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    
+//    cell.textLabel.text = @"Foobar";
+//    
+//    return cell;
+//}
 
 /*
 // Override to support conditional editing of the table view.
